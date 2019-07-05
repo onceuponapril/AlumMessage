@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h2>Send message by UniqName</h2>
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    <div class="row">
+        <div class="col-6">
+          {{ form.sender|as_crispy_field }}
+        </div>
+
+        <div class="col-6">
+              {{ form.receiver|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-12">
+              {{ form.content|as_crispy_field }}
+            </div>
+        </div>
+    <button type="submit" class="btn btn-success">Send</button>
+  </form>
+{% endblock %}
