@@ -5,12 +5,25 @@ from .models import Message
 
 
 class MessageForm(forms.ModelForm):
-	class Meta:
-		model = Message
-		fields = '__all__'
+        class Meta:
+            model = Message
+            fields = '__all__'
 
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		self.helper = FormHelper()
-		self.helper.form_method = 'post'
-		self.helper.add_input(Submit('submit', 'submit'))
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.helper = FormHelper()
+            self.helper.form_method = 'post'
+            self.helper.add_input(Submit('submit', 'submit'))
+
+# class UserForm(forms.ModelForm):
+#         password = forms.CharField(widget=forms.PasswordInput)
+
+#         class Meta:
+#             model = User
+#             fields = '__all__'
+
+#         def __init__(self, *args, **kwargs):
+#             super().__init__(*args, **kwargs)
+#             self.helper = FormHelper()
+#             self.helper.form_method = 'post'
+#             self.helper.add_input(Submit('submit', 'submit'))

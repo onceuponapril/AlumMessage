@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+
+<h2>Input your uniqName to read messages</h2>
+<form action="{% url 'messagesList' %}" method="get">
+        <input name="q" type="text" placeholder="i.e. mu">
+        <button type="submit" class="btn btn-outline-secondary">Check</button>
+</form>
+
+
+
+
+{% else %}
+<a></a>
+{% endif %}
+
+{% endblock %}

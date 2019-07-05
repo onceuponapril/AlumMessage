@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if message_list %}
+<ul class="container">
+        {% for msg in message_list %}
+          <ol class="list-group-item">
+            
+            <div class="notice notice-lg">
+                <strong> {{ msg.sender }}:</strong> 
+                {{ msg.content }}
+            </div>
+              
+          </ol>
+        {% endfor %}
+</ul>
+{% else %}
+<p>No Messages.</p>
+{% endif %}
+{% endblock %}

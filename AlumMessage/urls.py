@@ -20,5 +20,6 @@ from django.http import HttpResponseRedirect
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda r: HttpResponseRedirect('message/')),
+    path('message/', include('django.contrib.auth.urls')),
     path('message/', include('message.urls'))
 ]
