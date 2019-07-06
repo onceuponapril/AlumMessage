@@ -1,7 +1,8 @@
 # AlumMessage
 ## Envrionment
-step 1: Create a virtual environment: `virtualenv venv`. Then activate the venv and pip install all required package.
+step 1: Create a virtual environment: `virtualenv venv`. Then activate the venv and pip install all required package (requirements.txt).
 step 2: Run migration: `python manage.py migrate`, which will help you build the database. 
+step 3: Run the app by command `python manage.py runserver`.
 
 ## Features
 1. On the home page, you can log in if you are a member of admin, otherwise click the 'sigh up' button which will lead you to create the account. It is a default  built-in feature, and you need to follow its requirements i.e. 'Your password can't be entirely numeric.' If it cannot be processed, remember to check if you meet the requirments or not. Alternatively, you can create your account by 'createsuperuser'. 
