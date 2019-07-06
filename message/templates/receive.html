@@ -5,9 +5,10 @@
 {% if user.is_authenticated %}
 
 
-<h2>Input your uniqName to read messages</h2>
+<h3>Input your uniqName to read your messages</h3>
 <form action="{% url 'messagesList' %}" method="get">
-        <input name="q" type="text" placeholder="i.e. mu">
+        <input name="q" type="text" placeholder="For example: um">
+        <br><br>
         <button type="submit" class="btn btn-outline-secondary">Check</button>
 </form>
 
@@ -15,7 +16,7 @@
 
 
 {% else %}
-<a></a>
+<a href="{% url 'login' %}">Log in</a>
 {% endif %}
 
 {% endblock %}

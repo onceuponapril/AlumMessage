@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if user.is_authenticated %}
 
 {% if message_list %}
 <ul class="container">
@@ -17,5 +18,7 @@
 </ul>
 {% else %}
 <p>No Messages.</p>
+{% endif %}
+
 {% endif %}
 {% endblock %}
